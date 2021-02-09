@@ -2,8 +2,15 @@
 
 import random
 
+import dotenv
+import os
+dotenv.load_dotenv() 
+from dotenv import load_dotenv # go get the function we need
+load_dotenv() # invoke the function
+USER_NAME = os.getenv("USER_NAME", default="Player One") 
+
 print("-------------------------------")
-print("Welcome 'Player One' to Rock Paper Scissors!")
+print(f"Welcome '{USER_NAME}' to Rock Paper Scissors!")
 print("-------------------------------")
 
 # asking user for input
